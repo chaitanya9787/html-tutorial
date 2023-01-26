@@ -9,86 +9,171 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
 
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "poppins", sans-serif;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        /* background-image: linear-gradient(rgba(0,0,50,8), rgba(0,0,50,8),url(./image/Cave.jpg); */
+        background-position: center;
+        background-size: cover;
+        position: relative;
+      }
+
+      /* .title {
+        text-align: center;
+        font-size: 50px;
+        text-transform: capitalize;
+      }
       form {
         text-align: center;
       }
       p {
         text-transform: capitalize;
+      } */
+      .form-box {
+        width: 90%;
+        max-width: 450px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgb(204, 67, 67);
+        padding: 50px 90px 70px;
+        text-align: center;
+      }
+      .form-box h1 {
+        font-size: 30px;
+        margin-bottom: 60px;
+        color: rgb(10, 10, 9);
+        position: relative;
+      }
+      .form-box h1::after {
+        content: "";
+        width: 30px;
+        height: 4px;
+        border-radius: 3px;
+        background: #17141c;
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      .input-field {
+        background: #eaeaea;
+        margin: 15px 0;
+        border-radius: 4px;
+        display: flex;
+      }
+      input {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        padding: 18px 15px;
+      }
+      .input-field i {
+        margin-left: 0;
+        color: #999;
+        margin-top: 9px;
+      }
+
+      form p {
+        text-align: left;
+        font-size: 13px;
+      }
+      form p a {
+        text-decoration: none;
+        color: #3c00a0;
+      }
+      .btn-field {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .btn-field button {
+        flex-basis: 48%;
+        height: 40px;
+        border-radius: 20px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        height: 100vh;
       }
     </style>
   </head>
-  <p><em>Input tag is used to form element allows the input data</em></p>
-  <h1><strong>input Attributes</strong></h1>
-  <ul>
-    <li>placeholder</li>
-    <li>id</li>
-    <li>name</li>
-    <li>type</li>
-    <li>for</li>
-  </ul>
-  <h1>types of values</h1>
-  <ul>
-    <li>name</li>
-    <li>email</li>
-    <li>radio</li>
-    <li>checkbox</li>
-    <li>password</li>
-    <li>number</li>
-  </ul>
-  <p>
-    type attributes is used to add to specific value and default value is text
-  </p>
-
   <body>
+    <!-- <p><em>Input tag is used to form element allows the input data</em></p>
+    <h1><strong>input Attributes</strong></h1>
+    <ul>
+      <li>placeholder</li>
+      <li>id</li>
+      <li>name</li>
+      <li>type</li>
+      <li>for</li>
+    </ul>
+    <h1>types of values</h1>
+    <ul>
+      <li>name</li>
+      <li>email</li>
+      <li>radio</li>
+      <li>checkbox</li>
+      <li>password</li>
+      <li>number</li>
+    </ul>
+    <p>
+      type attributes is used to add to specific value and default value is text
+    </p> -->
+
     <div class="container">
-      <div class="row">
-        <div class="col">
-      <form class="form-group">
-        <h1>Registration Form</h1>
-        <p>complete the form below and press the submit button</p>
-        <input class="form-control m-2" type="text" placeholder="Full name" />
-        <br />
-        <br />
-        <input class="form-control m-2" type="text" placeholder="Father name" />
-        <br />
-        <br />
-        <input class="form-control m-2" type="Email" placeholder="Email" />
-        <br />
-        <br />
-        <input class="form-control m-2" type="number" placeholder="Number" />
-        <br />
-        <br />
-        <input
-          class="form-control m-2"
-          type="checkbox"
-          id="cricket"
-          placeholder="checkbox"
-        />
-        <label for="cricket">cricket</label>
-        <br />
-        <br />
+      <div class="form-box">
+        <h1>sign up</h1>
+        <form action="">
+          <div class="input-group">
+            <div class="input-field">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" placeholder="Name" />
+            </div>
+          </div>
 
-        <input
-          id="gender"
-          
-          type="radio"
-          placeholder="gender"
-          name="gender"
-        />
-        <label for="gender">male</label>
-        <input
-          id="gender"
-          type="radio"
-          placeholder="female"
-          name="gender"
-        />
-        <label for="gender">female</label>
-      </form>
+          <div class="input-group">
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" placeholder=" Enter Your Email" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-field">
+              <i class="fa-solid fa-user"></i>
+              <input type="password" placeholder="Enter Your Password" />
+            </div>
+            <p>lost password <a href="">click here</a></p>
+          </div>
+          <div class="btn-field">
+            <button class="btn btn-info">sign up</button>
+            <button class="btn btn-primary">sign in</button>
+          </div>
+        </form>
       </div>
+      <img src="../image/Cave.jpg" width="100px" height="100px" alt="" />
     </div>
-  </div>
-    <a href="../index.html"><button class="btn btn-primary">back</button></a>
 
+    <a href="../index.html"
+      ><button class="btn btn-primary text-center">back</button></a
+    >
+  </body>
 </html>

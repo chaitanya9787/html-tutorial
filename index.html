@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Html tutorial</title>
+    <link rel="stylesheet" href="style.css" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -21,46 +22,78 @@
         margin: 0;
         box-sizing: border-box;
       }
+
+      .navbar {
+        position: relative;
+        justify-content: space-between;
+        background-color: grey;
+        width: 100%;
+        text-align: center;
+        height: 10vh;
+      }
       h1 {
         margin-left: 50%;
       }
       .sidebar {
         width: 250px;
-        height: 100%;
+        height: 100vh;
         position: fixed;
         left: 0;
         top: 0;
         margin-top: 60px;
-        background-color: rgb(143, 31, 31);
+        background: #1e1e1e;
+        box-sizing: border-box;
       }
+      .sidebar header {
+        font-size: 28px;
+        text-align: center;
+        background: #f2dbdb;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
       li {
+        display: block;
         font-size: 20px;
-        color: rgb(101, 54, 138);
+        box-sizing: border-box;
+        color: rgb(189, 164, 214);
         margin-top: 10px;
-        background-color: rgb(165, 243, 102);
-        padding: 10px;
+        /* background-color: rgb(8, 9, 7); */
+
+        border-bottom: 1px solid black;
+        padding: 15px;
+        padding-left: 45px;
         margin-right: 10px;
         text-transform: capitalize;
-        border: 1px solid blue;
+        transition: 4s;
       }
+
       .sidebar li a:hover {
-        background-color: rgb(78, 151, 36);
+        /* background-color: rgb(203, 220, 193); */
         padding: 10px;
         margin: 10px;
       }
 
-      .navbar {
-        background-color: rgb(7, 103, 177);
-        width: 100%;
-        text-align: center;
-        height: 10vh;
-      }
       .btn {
         border: 1px solid blue;
       }
 
       button:hover {
         background-color: rgb(155, 136, 14);
+      }
+      img {
+        width: 100%;
+        height: calc(100vh - 64.89px);
+        /* background-size: cover; */
+        /* position: fixed; */
+      }
+      i {
+        color: #f2dbdb;
+        margin-left: 230px;
+        font-size: 30px;
+      }
+      .btn {
+        margin-left: 300px;
+        margin-top: 0;
       }
     </style>
   </head>
@@ -69,10 +102,12 @@
       <h1>HTML Tutorial</h1>
 
       <div class="sidebar">
-        <div class="icon">
-          <i class="fa fa-bars"></i>
-        </div>
-        <ul>
+        <i class="fas fa-times"></i>
+        <i class="fas fa-bars btn"></i>
+
+        <header>My Menu</header>
+
+        <ul class="sidebar2">
           <li><a href="./topics/table.html">table</a></li>
           <li><a href="./topics/paragraph.html">paragraph</a></li>
           <li><a href="./topics/heading.html">heading</a></li>
@@ -82,6 +117,9 @@
           <li><a href="./topics/strong.html">strong</a></li>
         </ul>
       </div>
+    </div>
+    <div>
+      <img src="./image/Cave.jpg" alt="" />
     </div>
   </body>
 </html>
